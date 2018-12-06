@@ -11,9 +11,8 @@ $frontControllerPath = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'EEFrontControll
  * Probably don't edit anything below this
  */
 
+define('MASKED_CP', true);
+define('REQ', 'CP');
 define('SELF', basename(__FILE__));
 define('FCPATH', __DIR__ . '/');
-$routing['directory'] = '';
-$routing['controller'] = 'ee';
-$routing['function'] = 'index';
 require $frontControllerPath;

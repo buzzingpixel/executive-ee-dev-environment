@@ -1,0 +1,27 @@
+{
+    "name": "buzzingpixel/executive-ee-dev-environment",
+    "description": "Testing environment for Executive for EE",
+    "license": "proprietary",
+    "homepage": "https://buzzingpixel.com",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../executive-ee",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "require": {
+        "buzzingpixel/executive-ee": "@dev"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "src\\" :  "src"
+        }
+    }
+}
