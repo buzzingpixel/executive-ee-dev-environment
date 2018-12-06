@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  web:
+    image: buzzingpixel/nginx:latest
+    container_name: nginx-executive-ee
+    ports:
+      - "${DOCKER_NGINX_PORT}:80"
+    volumes:
+      - .:/app:delegated
+      - ./dev/null:/app/.git:delegated
+      - ./dev/null:/app/.idea:delegated
+      - ./dev/null:/app/node_modules:delegated
+      - ${DOCKER_NGINX_CONF_FILE}:/etc/nginx/conf.d/site.conf:delegated
+      - ../executive-ee:/executive-ee:delegated
+      - ./dev/null:/executive-ee/.git:delegated
+      - ./dev/null:/executive-ee/.idea:delegated
+      - ./dev/null:/executive-ee/node_modules:delegated
+  php:
+    image: buzzingpixel/php7.2:latest
+    container_name: php-executive-ee
+    volumes:
+      - .:/app:delegated
+      - ./dev/null:/app/.git:delegated
+      - ./dev/null:/app/.idea:delegated
+      - ./dev/null:/app/node_modules:delegated
+      - ./serverConfig/php/php-custom-config.ini:/usr/local/etc/php/conf.d/php-custom-config.ini:delegated
+      - ${DOCKER_PHP_ENV_INI_FILE}:/usr/local/etc/php/conf.d/php-env-config.ini:delegated
+      - ../executive-ee:/executive-ee:delegated
+      - ./dev/null:/executive-ee/.git:delegated
+      - ./dev/null:/executive-ee/.idea:delegated
+      - ./dev/null:/executive-ee/node_modules:delegated
+  db:
+    image: buzzingpixel/mariadb:latest
+    container_name: db-executive-ee
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DOCKER_MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    user: "1000:50"
+    volumes:
+      - .:/app:delegated
+      - ./dev/null:/app/.git:delegated
+      - ./dev/null:/app/.idea:delegated
+      - ./dev/null:/app/node_modules:delegated
+      - ${DOCKER_DB_DATA_DIR}:/var/lib/mysql:delegated
+      - ../executive-ee:/executive-ee:delegated
+      - ./dev/null:/executive-ee/.git:delegated
+      - ./dev/null:/executive-ee/.idea:delegated
+      - ./dev/null:/executive-ee/node_modules:delegated
+    ports:
+      - "${DOCKER_DB_PORT}:3306"
