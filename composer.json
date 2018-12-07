@@ -23,5 +23,8 @@
         "psr-4": {
             "src\\" :  "src"
         }
+    },
+    "extra": {
+        "provisionEEVersionTag": "5.0.1"
     }
 }

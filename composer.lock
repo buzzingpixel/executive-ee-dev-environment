@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "75bc23799cc500f75e615f40108fb768",
+    "content-hash": "301752dd59a571946551a61c78776074",
     "packages": [
         {
             "name": "buzzingpixel/executive-ee",
-            "version": "3.0.0-b.6",
+            "version": "3.0.0-b.7",
             "dist": {
                 "type": "path",
                 "url": "../executive-ee",
-                "reference": "9dd2cf1c516b623e91bbc1cc8d723f60554d0b4f",
+                "reference": "5e0931b90c3715640e86f5c94f07570daceba477",
                 "shasum": null
             },
             "require": {
@@ -28,14 +28,13 @@
                 "vlucas/phpdotenv": "^2.5"
             },
             "require-dev": {
-                "roave/security-advisories": "dev-master",
-                "tjdraper/expressionengine": "^4.3"
+                "roave/security-advisories": "dev-master"
             },
             "type": "ee-add-on",
             "extra": {
                 "handle": "executive",
                 "systemPath": "src/executive",
-                "version": "3.0.0-b.6"
+                "version": "3.0.0-b.7"
             },
             "autoload": {
                 "psr-4": {
@@ -934,7 +933,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -1003,16 +1002,16 @@
         },
         {
             "name": "symfony/contracts",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/contracts.git",
-                "reference": "3edf0ab943d1985a356721952cba36ff31bd6e5f"
+                "reference": "1aa7ab2429c3d594dd70689604b5cf7421254cdf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/contracts/zipball/3edf0ab943d1985a356721952cba36ff31bd6e5f",
-                "reference": "3edf0ab943d1985a356721952cba36ff31bd6e5f",
+                "url": "https://api.github.com/repos/symfony/contracts/zipball/1aa7ab2429c3d594dd70689604b5cf7421254cdf",
+                "reference": "1aa7ab2429c3d594dd70689604b5cf7421254cdf",
                 "shasum": ""
             },
             "require": {
@@ -1067,11 +1066,11 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2018-11-24T09:35:08+00:00"
+            "time": "2018-12-05T08:06:11+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -1121,7 +1120,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -1395,7 +1394,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
